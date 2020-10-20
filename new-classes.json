@@ -1,0 +1,116 @@
+{
+  "name" : "PIbd21-Pecherskih-A.A_Java",
+  "type" : "Директория",
+  "methods" : [ ],
+  "children" : [ {
+    "name" : "Lab1_var24_Java",
+    "type" : "Директория",
+    "methods" : [ ],
+    "children" : [ {
+      "name" : "bin",
+      "type" : "Директория",
+      "methods" : [ ],
+      "children" : [ ]
+    }, {
+      "name" : "src",
+      "type" : "Директория",
+      "methods" : [ ],
+      "children" : [ {
+        "name" : "Dish.java",
+        "type" : "Класс",
+        "methods" : [ "Init", "AddSalt", "AddPotato" ],
+        "children" : [ ]
+      }, {
+        "name" : "Form1.java",
+        "type" : "Класс",
+        "methods" : [ "run", "main", "actionPerformed", "actionPerformed", "actionPerformed", "actionPerformed", "actionPerformed", "actionPerformed", "actionPerformed", "actionPerformed", "actionPerformed", "actionPerformed", "actionPerformed", "initialize" ],
+        "children" : [ ]
+      }, {
+        "name" : "Knife.java",
+        "type" : "Класс",
+        "methods" : [ "Clean", "Slice" ],
+        "children" : [ ]
+      }, {
+        "name" : "Oil.java",
+        "type" : "Класс",
+        "methods" : [ "setState", "getState", "getTemperature", "GetHeat", "GetOil" ],
+        "children" : [ ]
+      }, {
+        "name" : "Pan.java",
+        "type" : "Класс",
+        "methods" : [ "getReadyToGo", "Init", "InitOil", "AddOil", "AddPotato", "CheckOil", "CheckPotato", "GetHeat", "IsReady", "GetPotatos" ],
+        "children" : [ ]
+      }, {
+        "name" : "Potato.java",
+        "type" : "Класс",
+        "methods" : [ "setHave_skin", "getHave_skin", "setHave_parts", "getHave_parts", "getHas_ready", "setDirty", "getDirty", "GetHeat" ],
+        "children" : [ ]
+      }, {
+        "name" : "Salt.java",
+        "type" : "Класс",
+        "methods" : [ "setCount", "getCount" ],
+        "children" : [ ]
+      }, {
+        "name" : "Stove.java",
+        "type" : "Класс",
+        "methods" : [ "setState", "getState", "setPan", "getPan", "Cook" ],
+        "children" : [ ]
+      }, {
+        "name" : "WaterTap.java",
+        "type" : "Класс",
+        "methods" : [ "setState", "getState", "Wash" ],
+        "children" : [ ]
+      } ]
+    } ]
+  }, {
+    "name" : "Lab2_var24_Java",
+    "type" : "Директория",
+    "methods" : [ ],
+    "children" : [ {
+      "name" : "bin",
+      "type" : "Директория",
+      "methods" : [ ],
+      "children" : [ ]
+    }, {
+      "name" : "src",
+      "type" : "Директория",
+      "methods" : [ ],
+      "children" : [ {
+        "name" : "ColorDialog.java",
+        "type" : "Класс",
+        "methods" : [ "actionPerformed", "actionPerformed", "stateChanged", "stateChanged", "stateChanged", "getPreferredSize", "getColor" ],
+        "children" : [ ]
+      }, {
+        "name" : "Form1.java",
+        "type" : "Класс",
+        "methods" : [ "run", "main", "checkFields", "actionPerformed", "actionPerformed", "actionPerformed", "actionPerformed", "actionPerformed", "actionPerformed", "initialize" ],
+        "children" : [ ]
+      }, {
+        "name" : "ITransport.java",
+        "type" : "Класс",
+        "methods" : [ "movePlane", "drawPlane", "setPosition", "loadPassenger", "getPassenger" ],
+        "children" : [ ]
+      }, {
+        "name" : "LightPlane.java",
+        "type" : "Класс",
+        "methods" : [ "drawLightPlane" ],
+        "children" : [ ]
+      }, {
+        "name" : "Plane.java",
+        "type" : "Класс",
+        "methods" : [ "setMaxCountPassengers", "setMaxSpeed", "setMaxAltitude", "setWeight", "drawPlane", "movePlane", "drawLightPlane" ],
+        "children" : [ ]
+      }, {
+        "name" : "PlanePanel.java",
+        "type" : "Класс",
+        "methods" : [ "updatePlane", "paint" ],
+        "children" : [ ]
+      }, {
+        "name" : "Vehicle.java",
+        "type" : "Класс",
+        "methods" : [ "getMaxCountPassengers", "setMaxCountPassengers", "getMaxSpeed", "setMaxSpeed", "getMaxAltitude", "setMaxAltitude", "getWeight", "setWeight", "getColorBody", "setColorBody", "getDopColor", "setDopColor", "drawPlane", "movePlane", "loadPassenger", "getPassenger", "setPosition" ],
+        "children" : [ ]
+      } ]
+    } ]
+  } ]
+}
