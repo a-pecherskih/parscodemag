@@ -1,0 +1,65 @@
+[ {
+  "className" : "Dish.java",
+  "packageName" : "D:/0_Магистратура/PIbd21-Pecherskih-A.A_Java/Lab1_var24_Java/src",
+  "methods" : [ "Init", "AddSalt", "AddPotato" ]
+} , {
+  "className" : "Form1.java",
+  "packageName" : "D:/0_Магистратура/PIbd21-Pecherskih-A.A_Java/Lab1_var24_Java/src",
+  "methods" : [ "run", "main", "actionPerformed", "actionPerformed", "actionPerformed", "actionPerformed", "actionPerformed", "actionPerformed", "actionPerformed", "actionPerformed", "actionPerformed", "actionPerformed", "actionPerformed", "initialize" ]
+}, {
+  "className" : "Knife.java",
+  "packageName" : "D:/0_Магистратура/PIbd21-Pecherskih-A.A_Java/Lab1_var24_Java/src",
+  "methods" : [ "Clean", "Slice" ]
+}, {
+  "className" : "Oil.java",
+  "packageName" : "D:/0_Магистратура/PIbd21-Pecherskih-A.A_Java/Lab1_var24_Java/src",
+  "methods" : [ "setState", "getState", "getTemperature", "GetHeat", "GetOil" ]
+}, {
+  "className" : "Pan.java",
+  "packageName" : "D:/0_Магистратура/PIbd21-Pecherskih-A.A_Java/Lab1_var24_Java/src",
+  "methods" : [ "getReadyToGo", "Init", "InitOil", "AddOil", "AddPotato", "CheckOil", "CheckPotato", "GetHeat", "IsReady", "GetPotatos" ]
+}, {
+  "className" : "Potato.java",
+  "packageName" : "D:/0_Магистратура/PIbd21-Pecherskih-A.A_Java/Lab1_var24_Java/src",
+  "methods" : [ "setHave_skin", "getHave_skin", "setHave_parts", "getHave_parts", "getHas_ready", "setDirty", "getDirty", "GetHeat" ]
+}, {
+  "className" : "Salt.java",
+  "packageName" : "D:/0_Магистратура/PIbd21-Pecherskih-A.A_Java/Lab1_var24_Java/src",
+  "methods" : [ "setCount", "getCount" ]
+}, {
+  "className" : "Stove.java",
+  "packageName" : "D:/0_Магистратура/PIbd21-Pecherskih-A.A_Java/Lab1_var24_Java/src",
+  "methods" : [ "setState", "getState", "setPan", "getPan", "Cook" ]
+}, {
+  "className" : "WaterTap.java",
+  "packageName" : "D:/0_Магистратура/PIbd21-Pecherskih-A.A_Java/Lab1_var24_Java/src",
+  "methods" : [ "setState", "getState", "Wash" ]
+}, {
+  "className" : "ColorDialog.java",
+  "packageName" : "D:/0_Магистратура/PIbd21-Pecherskih-A.A_Java/Lab2_var24_Java/src",
+  "methods" : [ "actionPerformed", "actionPerformed", "stateChanged", "stateChanged", "stateChanged", "getPreferredSize", "getColor" ]
+}, {
+  "className" : "Form1.java",
+  "packageName" : "D:/0_Магистратура/PIbd21-Pecherskih-A.A_Java/Lab2_var24_Java/src",
+  "methods" : [ "run", "main", "checkFields", "actionPerformed", "actionPerformed", "actionPerformed", "actionPerformed", "actionPerformed", "actionPerformed", "initialize" ]
+}, {
+  "className" : "ITransport.java",
+  "packageName" : "D:/0_Магистратура/PIbd21-Pecherskih-A.A_Java/Lab2_var24_Java/src",
+  "methods" : [ "movePlane", "drawPlane", "setPosition", "loadPassenger", "getPassenger" ]
+}, {
+  "className" : "LightPlane.java",
+  "packageName" : "D:/0_Магистратура/PIbd21-Pecherskih-A.A_Java/Lab2_var24_Java/src",
+  "methods" : [ "drawLightPlane" ]
+}, {
+  "className" : "Plane.java",
+  "packageName" : "D:/0_Магистратура/PIbd21-Pecherskih-A.A_Java/Lab2_var24_Java/src",
+  "methods" : [ "setMaxCountPassengers", "setMaxSpeed", "setMaxAltitude", "setWeight", "drawPlane", "movePlane", "drawLightPlane" ]
+}, {
+  "className" : "PlanePanel.java",
+  "packageName" : "D:/0_Магистратура/PIbd21-Pecherskih-A.A_Java/Lab2_var24_Java/src",
+  "methods" : [ "updatePlane", "paint" ]
+}, {
+  "className" : "Vehicle.java",
+  "packageName" : "D:/0_Магистратура/PIbd21-Pecherskih-A.A_Java/Lab2_var24_Java/src",
+  "methods" : [ "getMaxCountPassengers", "setMaxCountPassengers", "getMaxSpeed", "setMaxSpeed", "getMaxAltitude", "setMaxAltitude", "getWeight", "setWeight", "getColorBody", "setColorBody", "getDopColor", "setDopColor", "drawPlane", "movePlane", "loadPassenger", "getPassenger", "setPosition" ]
+} ]
