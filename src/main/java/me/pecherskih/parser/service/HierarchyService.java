@@ -41,7 +41,7 @@ public class HierarchyService {
             this.runAlgorithm(project2, project1, 0);
         }
 
-        return this.calcResult(maxLevels);
+        return this.calcResult(maxLevels-1);
     }
 
     private float calcResult(int maxLevels) {
