@@ -1,7 +1,5 @@
 package me.pecherskih.parser.model;
 
-import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
-import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 import com.github.javaparser.StaticJavaParser;
 import com.github.javaparser.ast.CompilationUnit;
 import com.github.javaparser.ast.PackageDeclaration;
@@ -16,8 +14,6 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 
-@JsonIgnoreProperties({ "me", "parentFile" })
-@JsonPropertyOrder({ "name", "type", "methods", "children" })
 public class FileInfo {
     private File me;
     private FileInfo parentFile;
@@ -34,10 +30,11 @@ public class FileInfo {
         this.children = new ArrayList<FileInfo>();
     }
 
-    public FileInfo(File me, FileInfo parentFile) {
+    public FileInfo(File me, FileInfo parentFile) throws FileNotFoundException {
         this.me = me;
         this.parentFile = parentFile;
         this.children = new ArrayList<FileInfo>();
+        this.initMethods();
     }
 
     public File getMe() {
@@ -72,29 +69,28 @@ public class FileInfo {
 //        }
 //    }
 
-//    public void setMethods(List<String> methods) {
-//        this.methods = methods;
-//    }
+    public List<String> getMethods() {
+        return this.methods;
+    }
 
-//    public List<String> getMethods() throws FileNotFoundException {
-//        if (me.getPath().endsWith(".java")) {
-//            CompilationUnit cu = StaticJavaParser.parse(new FileInputStream(this.me.getPath()));
-//            List<String> methodNames = new ArrayList<>();
-//            VoidVisitor<List<String>> methodNameCollector = new MethodNameCollector();
-//            methodNameCollector.visit(cu, methodNames);
-//            Optional<PackageDeclaration> pd = cu.getPackageDeclaration();
-//            this.setMethods(methodNames);
-//
-//            return methods;
-//        }
-//        return new ArrayList<String>();
-//    }
+    private void initMethods() throws FileNotFoundException {
+        this.methods = new ArrayList<String >();
 
-//    private static class MethodNameCollector extends VoidVisitorAdapter<List<String>> {
-//        @Override
-//        public void visit(MethodDeclaration md, List<String> collector) {
-//            super.visit(md, collector);
-//            collector.add(md.getNameAsString());
-//        }
-//    }
+        if (me.getPath().endsWith(".java")) {
+            CompilationUnit cu = StaticJavaParser.parse(new FileInputStream(this.me.getPath()));
+            List<String> methodsNames = new ArrayList<>();
+            VoidVisitor<List<String>> methodNameCollector = new MethodNameCollector();
+            methodNameCollector.visit(cu, methodsNames);
+            Optional<PackageDeclaration> pd = cu.getPackageDeclaration();
+            this.methods = methodsNames;
+        }
+    }
+
+    private static class MethodNameCollector extends VoidVisitorAdapter<List<String>> {
+        @Override
+        public void visit(MethodDeclaration md, List<String> collector) {
+            super.visit(md, collector);
+            collector.add(md.getNameAsString());
+        }
+    }
 }
