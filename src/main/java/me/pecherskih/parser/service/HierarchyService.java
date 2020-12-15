@@ -77,7 +77,7 @@ public class HierarchyService {
     private void runAlgorithm(FileInfo project1, FileInfo project2, int level) {
         //массив значений вершин [0,1] (файл не найден - 1)
         List<Integer> evaluations = new ArrayList<Integer>();
-
+        List<String> projectExistFiles = new ArrayList<String>();
         //проходим по дочерним директориям приоритетного проекта
         for (FileInfo child : project1.getChildren()) {
 
@@ -88,6 +88,7 @@ public class HierarchyService {
                 for (FileInfo child2 : project2.getChildren()) {
                     //есть ли директория/файл в другом проекте
                     if (child.getName().equals(child2.getName()) || (level == 0)) {
+                        projectExistFiles.add(child.getName());
                         //если сравниваются директории, то сравниваем содержимое директорий
                         if (child.isDirectory()) {
                             this.runAlgorithm(child, child2, level+1);
@@ -112,10 +113,39 @@ public class HierarchyService {
             }
         }
 
+        List<Integer> diffEvaluations = new ArrayList<>();
+        if (project2 != null) {
+            for (FileInfo child2 : project2.getChildren()) {
+                if (!projectExistFiles.contains(child2.getName())) {
+                    if (child2.isDirectory()) {
+                        int difference = this.countDiffFiles(child2);
+                        for(int i = 0; i < difference; i++) {
+                            diffEvaluations.add(1);
+                        }
+                    } else {
+                        diffEvaluations.add(1);
+                    }
+                }
+            }
+        }
+
         // объединяем оценки вершин одного уровня
         List<Integer> allEvaluations = new ArrayList<>(this.levels.get(level));
         allEvaluations.addAll(evaluations);
+        allEvaluations.addAll(diffEvaluations);
         this.levels.set(level, allEvaluations);
+    }
+
+    private int countDiffFiles(FileInfo dir) {
+        int counter = 0;
+        for (FileInfo child : dir.getChildren()) {
+            if (child.isDirectory()) {
+                counter+=this.countDiffFiles(child);
+            } else {
+                counter++;
+            }
+        }
+        return counter;
     }
 
     private float compareMethods(FileInfo file1, FileInfo file2) {
